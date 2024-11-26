@@ -1,0 +1,427 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #201b2d;
+	font-size: 15px;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+div, p, input, button, form, span, a, ul, li {
+	box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 900;
+}
+
+p {
+	line-height: 1.65em;
+}
+
+.header {
+	background: rgb(87,142,255);
+	background: linear-gradient(360deg, rgba(87,142,255,1) 27%, rgba(144,202,255,1) 100%);
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.sample-container {
+    width: 1024px;
+	margin: 0 auto;
+}
+
+.wrapper-inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: white;
+	font-family: 'Ubuntu', sans-serif;
+	margin-bottom: 100px;
+}
+.offer {
+	width: 700px;
+}
+.offer__title {
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 40px;
+	margin-bottom: 10px;
+}
+.offer__span {
+	font-size: 48px;
+	font-weight: 700;
+}
+.offer__text {
+	font-size: 16px;
+	font-weight: 400;
+	margin-bottom: 20px;
+}
+.offer__btn {
+	display: block;
+	width: 220px;
+	height: 55px;
+	background-color: #ffcc00;
+	font-weight: bold;
+	color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+    transition-duration: 1s;
+}
+.img1 {
+	width: 400px;
+    animation-name: dynamicObject;
+	transition: 2s;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	position: relative;
+}
+
+.content-Box {
+	background-color: white;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.header2 {
+	text-align: center;
+	margin-bottom: 40px;
+}
+.content-inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: black;
+	font-family: 'Ubuntu', sans-serif;
+	margin: 50px 0;
+}
+
+.block {
+	text-align: center;
+}
+.block__img {
+	margin-bottom: 20px;
+    animation-name: rotateObject;
+	animation-duration: 5s;
+	position: relative;
+}
+.block__title {
+	margin-bottom: 10px;
+}
+.block__text {
+	margin-bottom: 10px;
+}
+
+.form-Box{
+	background-color: #e6f0f8;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+form {
+	border: #000000;
+	text-align: center;
+    margin-bottom: 75px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="name-of-deliver"],
+input[type="tel-of-deliver"] {
+    width: 350px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+#orderDetails {
+    margin-bottom: 75px;
+    text-align: center;
+}
+
+textarea, select {
+    width: 350px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+button[type="submit"] {
+    background-color: #ffcc00;
+    color: #000;
+    border: none;
+    padding: 10px;
+	margin: 10px 0;
+    width: 350px;
+    font-size: 16px;
+    cursor: pointer;
+	font-weight: bold;
+    transition-duration: 1s;
+}
+
+.footer-box {
+	background: rgb(99,134,207);
+	background: linear-gradient(360deg, rgba(99,134,207,1) 27%, rgba(0,89,170,1) 100%);
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.footer {
+	color: white;
+	text-align: center;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+.header, .content-Box, .form-Box {
+    flex-grow: 1; 
+}
+
+.offer__btn:hover, button:hover {
+	transform: scale(1.1);
+	background-color: #ffd737;
+	box-shadow: 0px 0px 5px rgb(51, 51, 51);
+	cursor: pointer;
+}
+
+.block:hover {
+	transform: scale(1.1);
+}
+
+.img1:hover {
+	transform: skew(10deg, 0)
+}
+
+/* Версия для экранов 1200px и меньше */
+@media screen and (max-width: 1200px) {
+    .sample-container {
+        width: 960px;
+    }
+    
+}
+
+/* Версия для экранов 992px и меньше */
+@media screen and (max-width: 992px) {
+    .sample-container {
+        width: 720px;
+    }
+    .wrapper-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+    .offer {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .offer__btn {
+        width: 100%;
+    }
+    .img1 {
+        width: 300px;
+        margin-top: 30px;
+    }
+    .offer__title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .offer__span {
+        font-size: 36px;
+    }
+    .content-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+    .block {
+        width: 100%;
+        margin: 20px auto;
+    }
+    form {
+        width: 100%;
+        text-align: center;
+    }
+    .logo {
+        margin: 20px auto;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="number"],
+    button[type="submit"] {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    textarea {
+        width: 100%;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    select {
+        width: 100%;
+        font-size: 16px;
+    }
+}
+
+/* Версия для экранов 768px и меньше */
+@media screen and (max-width: 768px) {
+    .sample-container {
+        width: 100%;
+        padding: 0 15px;
+    }
+    .header, .form-Box, .content-Box {
+        padding: 20px 0;
+    }
+    .wrapper-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+    .offer {
+        width: 100%;
+        text-align: center;
+    }
+    .img1 {
+        width: 50%;
+        margin-top: 30px;
+    }
+    .offer__title {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .offer__span {
+        font-size: 30px;
+    }
+    .content-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+    .block {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    form {
+        width: 100%;
+        text-align: center;
+    }
+    .offer__button {
+        width: 100%;
+        max-width: 300px;
+        margin: 20px auto; 
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    button[type="submit"] {
+        width: 100%;
+        font-size: 16px;
+    }
+    .footer {
+        font-size: 12px;
+    }
+}
+
+.special-inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: black;
+	font-family: 'Ubuntu', sans-serif;
+	margin: 50px 0;
+}
+
+#colorBox {
+    width: 150px;
+    height: 150px;
+    background-color: lightblue;
+    margin: 20px;
+    text-align: center;
+    line-height: 150px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#toggleBox {
+    width: 150px;
+    height: 150px;
+    background-color: lightgreen;
+    margin: 20px;
+    text-align: center;
+    line-height: 150px;
+    transition: opacity 0.3s;
+}
+
+@keyframes dynamicObject {
+	0% {
+		top: 0px;
+	}
+
+	50% {
+		top: 20px;
+	}
+
+	100% {
+		top: 0px;
+	}
+}
+
+@keyframes rotateObject {
+	0% {
+		transform: rotate(20deg);
+	}
+
+	25% {
+		transform: rotate(-15deg);
+	}
+
+	50% {
+		transform: rotate(10deg);
+	}
+
+	75% {
+		transform: rotate(-5deg);
+	}
+
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+/* Основной стиль для сообщения об ошибке */
+.error-message {
+    color: #D32F2F; /* Красный, но не слишком яркий */
+    font-size: 14px; /* Размер текста, чтобы он был читаемым */
+    font-family: 'Open Sans', sans-serif; /* Четкий шрифт */
+    margin: 5px 0; /* Отступы, чтобы текст не "лип" к полям */
+    padding: 4px; /* Отступ внутри ошибки */
+}
+
+/* Если нужно подсвечивать поля с ошибками */
+.input-error {
+    border: 2px solid #D32F2F; /* Красный цвет рамки */
+    background-color: #FFEBEE; /* Светло-красный фон */
+}

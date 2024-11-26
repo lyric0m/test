@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Company</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="main-container animate__animated animate__fadeInDownBig">
+        <div class="main-container">
+            <header class="header">
+                <div class="sample-container">
+                    <img class="logo animate__animated animate__jackInTheBox" src="img/logo.png" alt="logo">
+                    <div class="wrapper-inner">
+                        <div class="offer">
+                            <h1 class="offer__title">С помощью нас<br>
+                                вы сможете создать то, о чем</h1>
+                            <span class="offer__span">желаете!</span>
+                            <p class="offer__text">Наши возможности + опыт позволят Вам достичь<br>
+                                огромного успеха. Мы верим в вас! И знаем это на<br>
+                                все 100%. Вас не остановить!</p>
+                            <a href="#" class="offer__btn">Узнать больше...</a>
+                        </div>
+                        <img class="img1" src="img/header-img.png" alt="header-img">
+                    </div>
+                </div>
+            </header>
+
+            <div class="content-Box">
+                <div class="sample-container">
+                    <h2 class="header2">Что Вам необходимо?</h2>
+                    <div class="content-inner">
+                        <div class="block">
+                            <img src="img/f3.png" alt="f3" class="block__img">
+                            <h3 class="block__title">Первый блок</h3>
+                            <p class="block__text">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+                        </div>
+                        <div class="block">
+                            <img src="img/f4.png" alt="f4" class="block__img">
+                            <h3 class="block__title">Второй блок</h3>
+                            <p class="block__text">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+                        </div>
+                        <div class="block">
+                            <img src="img/f5.png" alt="f5" class="block__img">
+                            <h3 class="block__title">Третий блок</h3>
+                            <p class="block__text">Lorem ipsum dolor sit amet consectetur adipiscing elit</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-Box">
+                <div class="sample-container">
+                    <h2 class="header2">Форма заказа продукта или услуги</h2>
+                    <form action="#" method="post" enctype="multipart/form-data" class="product-order-form"
+                        id="productOrderForm">
+                        <label for="name">Имя:</label><br>
+                        <input type="text" id="name" name="name" placeholder="Введите ваше имя"
+                            title="Введите ваше имя">
+                        <div class="error-message" id="nameError"></div><br>
+
+                        <label for="phone">Телефон:</label><br>
+                        <input type="tel" id="phone" name="phone" placeholder="Введите номер телефона"
+                            title="Введите номер телефона">
+                        <div class="error-message" id="phoneError"></div><br>
+
+                        <label for="email">E-mail:</label><br>
+                        <input type="email" id="email" name="email" placeholder="Введите ваш E-mail"
+                            title="Введите ваш E-mail">
+                        <div class="error-message" id="emailError"></div><br>
+
+                        <p>Выберите продукты:</p><br>
+                        <label><input type="checkbox" name="product" value="Визитки" id="product1"> Визитки</label>
+                        <label><input type="checkbox" name="product" value="Плакаты" id="product2"> Плакаты</label>
+                        <label><input type="checkbox" name="product" value="Листовки" id="product3"> Листовки</label>
+                        <div id="productError" class="error-message"></div><br>
+
+                        <label for="quantity">Количество:</label><br>
+                        <input type="number" id="quantity" placeholder="Выберите количество" name="quantity">
+                        <div class="error-message" id="quantityError"></div><br>
+
+                        <label for="date">Дата:</label><br>
+                        <input type="date" id="date" name="date">
+                        <div class="error-message" id="dateError"></div><br>
+
+                        <label for="delivery">Способ получения:</label><br>
+                        <select id="delivery" name="delivery">
+                            <option value="" disabled selected>Выберите способ получения</option>
+                            <option value="delivery">Доставка</option>
+                            <option value="pickup">Самовывоз</option>
+                        </select>
+                        <div class="error-message" id="deliveryError"></div><br>
+
+                        <label for="comments">Комментарии:</label><br>
+                        <textarea id="comments" placeholder="Комментарий" name="comments" rows="4" cols="50"
+                            title="Максимум 200 символов"></textarea>
+                        <div class="error-message" id="commentsError"></div><br>
+
+                        <button type="submit">Оформить заказ</button><br>
+                    </form>
+                    <div id="orderDetails"></div>
+
+                    <h2 class="header2">Форма заказа обратного звонка</h2>
+                    <form action="#" method="get" enctype="multipart/form-data" class="form">
+                        <input type="text" id="name" name="name" placeholder="Имя" required
+                            pattern="[A-Za-zА-Яа-яЁё\s]+" minlength="2"
+                            title="Имя должно содержать только буквы и быть длиной не менее 2 символов">
+                        <br>
+                        <input type="email" id="email" name="email" placeholder="Введите свой E-mail" required
+                            title="Введите корректный email">
+                        <br>
+                        <input type="tel" id="phone" name="phone" placeholder="Телефон" required pattern="\d{10,15}"
+                            title="Введите телефонный номер из 10-15 цифр">
+                        <br>
+                        <input type="text" id="topic" name="topic" placeholder="Какая тема Вас интересует?" required
+                            minlength="5" maxlength="100" title="Тема должна содержать от 5 до 100 символов">
+                        <br>
+                        <button type="submit">Отправить вопрос!</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="special">
+                <div class="sample-container">
+                    <div class="special-inner">
+                        <h2>Что может данный сайт с использование js-скрипта</h2>
+                        <div>
+                            <div id="colorBox">Кликни меня</div>
+                            <div id="toggleBox">Наведи на меня</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer-box">
+                <div class="sample-container">
+                    <p class="footer">&copy; Все на этом сайте защищено</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
